@@ -1,0 +1,17 @@
+versions: django django python
+
+"poetry run python<version> manage.py ..."
+
+"docker-compose exec web poetry run python manage.py migrate"
+
+"sudo systemctl stop mongod" - stop/start
+
+"docker exec -it mongo_db mongosh -u root -p example --authenticationDatabase admin" - войти в mongoDB
+"show dbs" - базы в monngo
+"use mydatabase" - переход в бд
+"show collections" - посмотреть все сущности
+"db.<name_table>.find().pretty()" - находим записи в таблице
+"docker-compose exec web poetry run python server/manage.py load_templates" - для тестрования базы данных заполнение
+
+### For testing
+http://localhost:8000/form_templates/get_form?user_email=test@example.com&user_phone=%2B7%20123%20456%2078%2090
